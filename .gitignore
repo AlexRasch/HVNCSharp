@@ -1,0 +1,15 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.csproj.bak
+
+# C# specific
+*.pdb
+*.dll
+*.exe
